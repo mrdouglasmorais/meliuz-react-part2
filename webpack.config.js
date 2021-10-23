@@ -16,7 +16,8 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   devServer: {
-    static: path.resolve(__dirname, 'public', 'index.html'),
+    static: path.resolve(__dirname, 'public'),
+    historyApiFallback: true,
     hot: true,
   },
   plugins: [

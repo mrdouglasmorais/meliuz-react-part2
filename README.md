@@ -34,7 +34,7 @@ Não é sempre que a gente faz um projeto tão grande assim, a ponto de precisar
 "webpack-cli": "^4.9.1",
 "webpack-dev-server": "^4.3.1"
 
-Para instalar as dependencias de desenvolvimento é necessário rodar o seguinte comando: `npm i @babel/cli @babel/core @babel/plugin-syntax-jsx @babel/preset-env @babel/preset-react @babel/preset-typescript @types/react @types/react-dom babel-loader babel-preset-react-app cross-env css-loader html-webpack-plugin node-sass react-refresh sass-loader ts-node typescript webpack webpack-cli webpack-dev-server --save-dev`
+Para instalar as dependencias de desenvolvimento é necessário rodar o seguinte comando: `npm i @babel/cli @babel/core @babel/plugin-syntax-jsx @babel/preset-env @babel/preset-react @babel/preset-typescript @types/react @types/react-dom babel-loader babel-preset-react-app cross-env css-loader html-webpack-plugin node-sass react-refresh style-loader sass-loader ts-node typescript webpack webpack-cli webpack-dev-server --save-dev`
 
 Dependências do projeto: `npm i react react-dom react-router-dom axios`
 
