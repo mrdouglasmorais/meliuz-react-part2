@@ -5,7 +5,7 @@ interface IClient {
 }
 
 const RickAndMorty: React.FC = () => {
-  const [ data, setData ] = useState()
+  const [ data, setData ] = useState();
   return(
     <div>
       <h1>Hello world</h1>
