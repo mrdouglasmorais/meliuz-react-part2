@@ -1,0 +1,106 @@
+{
+  "terminal.integrated.fontSize": 12,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.tabSize": 2,
+  "editor.fontSize": 16,
+  "editor.lineHeight": 26,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "explorer.compactFolders": false,
+  "editor.renderLineHighlight": "gutter",
+  "workbench.editor.labelFormat": "short",
+  "extensions.ignoreRecommendations": true,
+  "java.updateImportsOnFileMove.enabled": "always",
+  "type.updateImportsOnFileMove.enabled": "never",
+  "breadcrumbs.enabled": true,
+  "editor.parameterHints.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.rulers": [
+      80,
+      120
+  ],
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "files.associations": {
+      ".sequelizerc": "java",
+      ".stylelintrc": "json",
+      ".prettierrc": "json"
+  },
+  "emmet.syntaxProfiles": {
+      "java": "jsx"
+  },
+  "emmet.includeLanguages": {
+      "java": "javareact"
+  },
+  "colorize.colorized_colors": [
+      "HEXA",
+      "ARGB",
+      "RGB",
+      "HSL",
+      "BROWSERS_COLORS"
+  ],
+  "colorize.languages": [
+      "typescript",
+      "javascript",
+      "json",
+      "html",
+      "css"
+  ],
+  "colorize.colorized_variables": [
+      "LESS",
+      "CSS"
+  ],
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "git.enableSmartCommit": true,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "liveshare.featureSet": "insiders",
+  "type.tsserver.log": "verbose",
+  "java.suggest.autoImports": true,
+  "type.suggest.autoImports": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "screencastMode.onlyKeyboardShortcuts": true,
+  "material-icon-theme.folders.associations": {
+      "infra": "app",
+      "entities": "class",
+      "schemas": "class",
+      "typeorm": "database",
+      "repositories": "mappings",
+      "http": "container",
+      "migrations": "tools",
+      "modules": "components",
+      "implementations": "core",
+      "dtos": "typescript",
+      "fakes": "mock",
+      "websockets": "pipe",
+      "protos": "pipe",
+      "grpc": "pipe",
+      "*.controller.ts": "nest-controller",
+      "*.module.ts": "nest-module",
+      "*.service.ts": "nest-service",
+      "*.middleware.ts": "nest-middleware",
+      "*.filter.ts": "nest-filter",
+      "*.pipe.ts": "nest-pipe",
+      "*.gateway.ts": "nest-gateway",
+      "*.decorator.ts": "nest-decorator",
+      "*.guard.ts": "nest-guard",
+      "*.resolver.ts": "graphql",
+      "*.input.ts": "graphql"
+  },
+  "material-icon-theme.files.associations": {
+      "ormconfig.json": "database",
+      "tsconfig.json": "tune",
+      "*.proto": "3d"
+  },
+  "workbench.colorTheme": "Omni",
+  "git.ignoreMissingGitWarning": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "aws.profile": "profile:default",
+  "tabnine.experimentalAutoImports": true,
+  "window.zoomLevel": 3
+}
