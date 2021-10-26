@@ -24,6 +24,12 @@ const RickAndMorty: React.FC = () => {
   const [ info, setInfo ] = useState<ICount>({} as ICount)
   const [ isLoad, setIsLoad ] = useState(false);
 
+  const valorQualquer = localStorage.getItem('@name')
+
+  const handleClearStorage = () => {
+    localStorage.removeItem('@name');
+  }
+
   useEffect(() => {
     setIsLoad(true)
     api.get<IResponseData>(`?page=${page}`).then(
@@ -50,6 +56,10 @@ const RickAndMorty: React.FC = () => {
 
   return(
     <div>
+      {valorQualquer}
+      <button onClick={handleClearStorage}>
+        Limpar localStorage
+      </button>
       <h1>RickAndMorty</h1>
       { data.map( item => (
         <div key={item.id}>

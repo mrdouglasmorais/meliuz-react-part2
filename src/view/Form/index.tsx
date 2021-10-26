@@ -1,20 +1,25 @@
-import React, { FormEvent } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Form from '../../components/Form';
+import { IAllPersons } from '../../store/modules/types';
 
 
-const Form: React.FC = () => {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    alert('Alert')
-  }
+const FormView: React.FC = () => {
+  const state = useSelector((state: IAllPersons) => state.persons);
   return(
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="nome"/>
-        <input type="text" placeholder="email"/>
-        <input type="submit" value="Cadastrar" />
-      </form>
+      <Form />
+      <br />
+      <hr />
+      <br />
+      { state.map( (person, index) => (
+        <div key={index}>
+          <span> Nome: {person.name}</span>
+          <span> Email: {person.email}</span>
+        </div>
+      )) }
     </div>
   )
 }
 
-export default Form;
+export default FormView;
