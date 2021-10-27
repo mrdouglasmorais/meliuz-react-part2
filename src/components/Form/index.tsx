@@ -9,7 +9,7 @@ const Form: React.FC = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     localStorage.setItem('@name', JSON.stringify(data))
-    dispatch(addNewPerson(data))
+    dispatch(addNewPerson(data));
   }
 
   return (
