@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Lottie from 'lottie-react';
+import AnimationMorty from '../../assets/animation/morty-dance-loader.json'
 import api from '../../service/api';
 
 interface IResults {
@@ -42,14 +44,20 @@ const RickAndMorty: React.FC = () => {
     )
     .catch( e => console.log(e))
     .finally( () => {
-      setIsLoad(false)
+      setTimeout(() => {
+        setIsLoad(false)
+      }, 1000)
      } );
   }, [page]);
 
   if(isLoad){
     return (
       <div>
-        <p>Carregando</p>
+        <Lottie
+          animationData={AnimationMorty}
+          width={400}
+          height={400}
+        />
       </div>
     )
   }
