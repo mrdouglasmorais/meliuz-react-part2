@@ -1,11 +1,11 @@
 import React, { useReducer, createContext } from 'react';
-import { ITodos } from '../interface'
+import {  ICountTodos, ICounterAction, IContextModel } from '../interface'
 
-const defaultState: ITodos = {
+const defaultState: ICountTodos = {
   todos: []
 }
 
-const reducer = ( state: ITodos, action: any ) => {
+const reducer = ( state: ICountTodos, action: ICounterAction ) => {
   switch (action.type) {
     case 'ADD': 
     return {
@@ -16,7 +16,7 @@ const reducer = ( state: ITodos, action: any ) => {
     case 'DELETE': 
     return {
       ...state,
-      todos: state.todos.filter((item) => item !== action.payload)
+      todos: state.todos.filter((item) => item.id !== action.payload)
     };
 
     default:
@@ -24,7 +24,7 @@ const reducer = ( state: ITodos, action: any ) => {
   }
 }
 
-export const Context = createContext({});
+export const Context = createContext({} as IContextModel);
 
 export const Provider: React.FC = ({ children }) => {
   const [ state, dispatch ] = useReducer(reducer, defaultState);
