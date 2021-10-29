@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home: React.FC = () => {
   return(
-    <div>
+    <div className="container">
       <h1>Home</h1>
     </div>
   )

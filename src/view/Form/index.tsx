@@ -7,7 +7,7 @@ import { IAllPersons } from '../../store/modules/types';
 const FormView: React.FC = () => {
   const state = useSelector((state: IAllPersons) => state.persons);
   return(
-    <div>
+    <div className="container">
       <Form />
       <br />
       <hr />

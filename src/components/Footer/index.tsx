@@ -6,7 +6,11 @@ const Footer: React.FC = () => {
   const state = useSelector((state: IAllPersons) => state.persons);
   return (
     <footer>
-      Qualquer coisa {state.length}
+      <p
+        style={{ textAlign: 'center' }}
+      > 
+        Qualquer coisa {state.length}
+      </p>
     </footer>
   );
 }

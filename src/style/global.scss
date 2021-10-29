@@ -1,19 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,200;1,300&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './vars';
 
 *{
   padding: 0;
   margin: 0;
+  font-family: $font-default;
+}
+
+body {
   background: rgb(218, 218, 218);
-  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+.loader{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .card{
+    background: #fff;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 12px;
+    text-align: center;
+
+  }
 }
 
 .nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
   & img{
     width: 150px;
     height: auto;
+  }
+  .links{
+    & > a{
+      text-decoration: none;
+      font-size: 14px;
+      margin: 5px;
+      background: green;
+      color: #fff;
+      padding: 4px;
+      border-radius: 5px;
+      transition: .6s;
+
+      &:hover{
+        background: #fff;
+        color: green;
+      }
+    }
   }
 }
 
 li {
   font-weight: 500;
+}
+
+footer {
+  height: 100px;
+  background: green;
+  padding: 10px;
+  color: #fff;
 }

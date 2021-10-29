@@ -10,21 +10,21 @@ interface IResults {
   url: string;
 }
 
-interface ICount{
+interface ICount {
   count: number;
   pages: number;
 }
 
-interface IResponseData{
+interface IResponseData {
   info: ICount;
   results: IResults[];
 }
 
 const RickAndMorty: React.FC = () => {
-  const [ data, setData ] = useState<IResults[]>([]);
-  const [ page, setPages ] = useState<number>(1);
-  const [ info, setInfo ] = useState<ICount>({} as ICount)
-  const [ isLoad, setIsLoad ] = useState(false);
+  const [data, setData] = useState<IResults[]>([]);
+  const [page, setPages] = useState<number>(1);
+  const [info, setInfo] = useState<ICount>({} as ICount)
+  const [isLoad, setIsLoad] = useState(false);
 
   const valorQualquer = localStorage.getItem('@name')
 
@@ -42,50 +42,51 @@ const RickAndMorty: React.FC = () => {
         console.log('Retorna', response.data.results)
       }
     )
-    .catch( e => console.log(e))
-    .finally( () => {
-      setTimeout(() => {
-        setIsLoad(false)
-      }, 1000)
-     } );
+      .catch(e => console.log(e))
+      .finally(() => {
+        setTimeout(() => {
+          setIsLoad(false)
+        }, 1000)
+      });
   }, [page]);
 
-  if(isLoad){
+  if (isLoad) {
     return (
-      <div>
+      <div className="container loader">
         <Lottie
           animationData={AnimationMorty}
-          width={400}
-          height={400}
+          style={{ width: '600px', height: '600px' }}
         />
       </div>
     )
   }
 
-  return(
-    <div>
+  return (
+    <div className="container">
       {valorQualquer}
       <button onClick={handleClearStorage}>
         Limpar localStorage
       </button>
       <h1>RickAndMorty</h1>
-      { data.map( item => (
-        <div key={item.id}>
-          <img src={item.image} alt={item.name} />
-          <p>{item.name}</p>
-          <a href={item.url}>Clique aqui para ver mais</a>
-        </div>
-      ))}
+      <div className="content">
+          {data.map(item => (
+            <div key={item.id} className="card">
+              <img src={item.image} alt={item.name} />
+              <p>{item.name}</p>
+              <a href={item.url}>Clique aqui para ver mais</a>
+            </div>
+          ))}
+      </div>
       <div>
         <button
-          onClick={ () => setPages(page - 1)}
-          disabled={ page <= 1 }
+          onClick={() => setPages(page - 1)}
+          disabled={page <= 1}
         >
           Anterior
         </button>
         <button
-          onClick={ () => setPages(page + 1)}
-          disabled={ page >= info.pages }
+          onClick={() => setPages(page + 1)}
+          disabled={page >= info.pages}
         >Proximo</button>
       </div>
     </div>
