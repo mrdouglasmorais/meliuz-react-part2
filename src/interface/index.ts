@@ -18,3 +18,14 @@ export interface IContextModel{
   state: ICountTodos;
   dispatch: React.Dispatch<ICounterAction>
 }
+
+export interface ISignUp{
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface ISignIn{
+  email: string;
+  password: string;
+}
